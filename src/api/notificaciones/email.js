@@ -1,5 +1,5 @@
 import { createTransport } from 'nodemailer';
-import { ServidorEnvioEmail } from "../../../config/config.js"
+import { ServidorEnvioEmail } from "../../config/config.js"
 import logger from "../../logger.js";
 
 const transporter = createTransport(ServidorEnvioEmail);

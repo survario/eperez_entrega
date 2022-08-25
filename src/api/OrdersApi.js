@@ -6,7 +6,7 @@ import logger from '../logger.js'
 import { enviarEmail } from './notificaciones/email.js'
 //import { enviarWhatsapp } from './notificaciones/whatsapp.js'
 //import { enviarSMS } from './notificaciones/sms.js'
-import config from '../../config/config.js'
+import config from '../config/config.js'
 
 
 export default class OrdersApi {

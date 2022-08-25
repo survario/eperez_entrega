@@ -1,6 +1,6 @@
 import bCrypt from 'bcrypt';
 import NUID from 'nuid';
-import config from '../../../config/config.js'
+import config from '../../config/config.js'
 
 export default class UsuarioDto {
 

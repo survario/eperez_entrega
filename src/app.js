@@ -1,6 +1,6 @@
 import logger from './logger.js'
 import {crearServidor} from './server.js'
-import config from '../config/config.js'
+import config from './config/config.js'
 import cluster from 'cluster' 
 import os  from 'os'
 

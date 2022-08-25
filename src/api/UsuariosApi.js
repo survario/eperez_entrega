@@ -3,7 +3,7 @@ import UsuarioDto from '../model/dtos/UsuarioDto.js';
 import CustomError from '../errores/CustomError.js'
 import logger from '../logger.js'
 import { enviarEmail } from './notificaciones/email.js'
-import config from '../../config/config.js'
+import config from '../config/config.js'
 
 export default class UsuariosApi {
 

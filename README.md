@@ -33,7 +33,34 @@ Vistas Implementadas para el admin (debe estar logueado con el ADMIN_EMAIL defin
     - /web/abmPedidos (Ver Mensajes)
 
 
-El resto de las Rutas se encuentran Implementadas para Postman
+El resto de las Rutas se encuentran Implementadas para Postman:
+
+    USERS
+
+    - POST /login
+    - POST /registro
+    - POST /uploadFile (imagen avatar)
+
+    PRODUCTS
+
+    - GET /api/products
+    - GET /api/products/:id
+    - POST /api/products (admin)
+    - PUT /api/products (admin)
+    - DELETE /api/products/:id (admin)
+    - POST /api/products/uploadFile (admin)
+    
+    CART
+
+    - POST /api/shoppingcartproducts
+    - GET /api/shoppingcartproducts
+    - DELETE /api/shoppingcartproducts
+
+    ORDERS
+
+    - POST /api/orders
+    - GET /api/orders
+
 
 
 --------------------------------Agosto 2022-----------------------------------

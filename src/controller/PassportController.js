@@ -2,7 +2,7 @@ import passport from 'passport';
 import { Strategy } from 'passport-local';
 import { Strategy as JWTstrategy } from 'passport-jwt';
 import logger from '../logger.js'
-import { jwtOpts } from '../../config/config.js'
+import { jwtOpts } from '../config/config.js'
 import UsuariosApi from '../api/UsuariosApi.js' 
 import {validarToken} from '../controller/UsuariosController.js' 
 import globals from 'globals';

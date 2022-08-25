@@ -5,7 +5,7 @@ import ShoppingCartApi from '../api/ShoppingCartApi.js'
 import OrdersApi from '../api/OrdersApi.js'
 import ChatApi from '../api/ChatApi.js'
 import jwt from 'jsonwebtoken'
-import { jwtOpts } from '../../config/config.js'
+import { jwtOpts } from '../config/config.js'
 import globals from 'globals';
 
 import os  from 'os'
