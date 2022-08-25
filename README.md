@@ -1,6 +1,6 @@
 Emmanuel Perez Bobadilla - Entrega Final Backend
 
-Link a la aplicación despegada en HEROKU:
+Link a la aplicación desplegada en HEROKU:
 ### https://emperezcode.herokuapp.com/
 
 Para iniciar la aplicación localmente:
