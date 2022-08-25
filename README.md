@@ -1,6 +1,9 @@
 Emmanuel Perez Bobadilla - Entrega Final Backend
 
-Para iniciar la aplicación:
+Link a la aplicación despegada en HEROKU:
+### https://emperezcode.herokuapp.com/
+
+Para iniciar la aplicación localmente:
 
 1. Instale las dependecias con el comando:
 ### `npm install`
@@ -11,15 +14,13 @@ Para probar las funcionalidades de admin, debe estar logueado con el email defin
 3. Ejecute la aplicación desde el directorio raíz de esta con el comando:
 ### `npm start`
 
-Link a la aplicación despegada en HEROKU:
-
 Vistas Implementadas
 /web
 /web/infoServer
 /web/login
 /web/chat
 
-El resto de las Rutas se encuentran Implememntadas para Postman
+El resto de las Rutas se encuentran Implementadas para Postman
 
 
 --------------------------------Agosto 2022-----------------------------------
@@ -27,7 +28,7 @@ El resto de las Rutas se encuentran Implememntadas para Postman
 #
 ## Example file .env 
 
-datos de eejemplo no válidos
+datos de ejemplo sugeridos
 
 // development / production
 
@@ -47,7 +48,7 @@ JWT_TIME_EXPIRE=3600
 
 //Configuracion de persistencia PRODUCCION
 
-MONGO_URL='mongodb+srv://user:password@cluster0.2ycpm.mongodb.net/?retryWrites=true&w=majority'
+MONGO_URL='mongodb+srv://emperez:coderhouse@cluster0.t9b55.mongodb.net/ecommerce?retryWrites=true&w=majority'
 
 MONGO_BASE=ecommerce
 
@@ -58,11 +59,11 @@ MAIL_SMTP = 'gmail'
 
 MAIL_PORT = 555
 
-MAIL_USER = 'email@gmail.com'
+MAIL_USER = 'emperezcode@gmail.com'
 
-MAIL_PASS = 'kkkkkkkkkkkkkkkk'
+MAIL_PASS = 'oauotpcfukqoucgy'
 
-MAIL_USER_ADMIN = 'email@gmail.com'
+MAIL_USER_ADMIN = 'emperezsur@gmail.com'
 
 
 WHATSAPP_USER_ADMIN = 'whatsapp:+5491111111111'
