@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>ABM de Usuarios</strong></h1>
+            <br>
+            <p>Listado de Usuarios</p>
+            <% const hayProductos=usuariosList.length> 0; %>
+            <div class="table-responsive">
+                <% if(hayProductos){ %>                
+                    <table class="table table-bordered tablaABM">
+                        <thead>
+                            <tr>
+                                <th>email</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>roles</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for (const item of usuariosList) {%>
+                            <tr>
+                                <td><%= item.email %></td>
+                                <td><%= item.nombre %></td>
+                                <td><%= item.apellido %></td>
+                                <td><%= item.roles %></td>
+                                <td>
+                                    <a href='#'>modificar</a>
+                                    <!--&nbsp;&nbsp;<a href='/usuario/borrar/<%= item.email %>'>borrar</a>-->
+                                    &nbsp;&nbsp;<a href='#'>borrar</a>
+                                </td>
+                            </tr>
+                        <%};%>
+                        </tbody>
+                    </table>
+                <% } else{ %>
+                    <h3 class="alert alert-danger">No hay usuarios dados de alta</h1>
+                <% } %>
+            </div>
+            <br>
+            <form action='#' method="get">
+                <input type="submit" class="btn btn-dark" name="nuevoUsuario" value="Nuevo Usuario">
+            </form>
+        </div>
+            
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+        
+    </body>
+
+</html>

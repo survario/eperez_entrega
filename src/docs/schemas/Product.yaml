@@ -1,0 +1,51 @@
+# Product
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: The auto-generated id of the product by MongoAtlas
+        id:
+          type: string
+          description: The auto-generated id of the product by systems
+        code:
+          type: number
+          description: The code of the product.
+        dateHour:
+          type: date
+          description: The dateHour of the product.
+        name:
+          type: string
+          description: The name of the product.
+        description:
+          type: string
+          description: The description of the product.
+        price:
+          type: number
+          description: The price of the product.
+        image:
+          type: string
+          description: The image of the product.
+        stock:
+          type: number
+          description: The stock of the product.
+        category:
+          type: number
+          description: The category of the product.
+        features:
+          type: number
+          description: The features of the product.
+      example:
+          _id: "62ebd10887910a1fd98baaff"
+          id: "200RHTQ24MRA5XMU9MEH56"
+          code: "123"
+          dateHour: "04/08/2022 11:08:56"
+          name: "test"
+          description: "Producto test"
+          price: 130
+          image: "http://localhost:8080/images/IMG_20180917_104633.jpg"
+          stock: 10
+          category: "dummy"
+          features: [color: "blue"]

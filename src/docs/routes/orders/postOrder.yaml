@@ -1,0 +1,17 @@
+paths:
+  /api/orders:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Generates an order from the current cart
+      tags:
+        - Orders
+      responses:
+        "200":
+          description: Generates an order from the current cart.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'

@@ -1,0 +1,21 @@
+paths:
+  /api/products:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update a product
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/UpdateProduct'
+      responses:
+        "200":
+          description: The updated product.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'

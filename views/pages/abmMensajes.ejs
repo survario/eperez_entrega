@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+        
+        <div class="container mt-3">
+            <h1><strong>ABM de Mensajes del Chat</strong></h1>
+            <br>
+            <p>Listado de mensajes del chat</p>
+            <% const hayProductos=mensajesChatList.length> 0; %>
+            <div class="table-responsive">
+                <% if(hayProductos){ %>                
+                    <table class="table table-bordered tablaABM">
+                        <thead>
+                            <tr>
+                                <th>Id Mensaje</th>
+                                <th>email</th>
+                                <th>Fecha y hora</th>
+                                <th>mensaje</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for (const item of mensajesChatList) {%>
+                            <tr>
+                                <td><%= item.id %></td>
+                                <td><%= item.email %></td>
+                                <td><%= item.fechaHora %></td>                                
+                                <td><%= item.mensaje %></td>
+                                <td>
+                                    <a href="#">modificar</a>
+                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                </td>
+                            </tr>
+                        <%};%>
+                        </tbody>
+                    </table>
+                <% } else{ %>
+                    <h3 class="alert alert-danger">No hay mensajes dados de alta</h1>
+                <% } %>
+            </div>
+            <br>
+            <button type="button" class="btn btn-dark">Nuevo Mensaje</button>
+        </div>
+            
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+        
+    </body>
+
+</html>

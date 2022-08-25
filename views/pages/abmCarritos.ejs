@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>ABM de Carritos</strong></h1>
+            <br>
+            <p>Listado de carritos de todos los usuarios</p>
+            <% const hayProductos=carritosList.length> 0; %>
+            <div class="table-responsive">
+                <% if(hayProductos){ %>                
+                    <table class="table table-bordered tablaABM">
+                        <thead>
+                            <tr>
+                                <th>Id Carrito</th>
+                                <th>Usuario</th>
+                                <th>estado</th>
+                                <th>Fecha Ult. Modif.</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for (const item of carritosList) {%>
+                            <tr>
+                                <td><%= item.id %></td>
+                                <td><%= item.emailUsuario %></td>
+                                <td><%= item.estado %></td>
+                                <td><%= item.fechaUltModif %></td>
+                                <td>
+                                    <a href="#">modificar</a>
+                                    &nbsp;&nbsp;<a href="#">Ver Productos</a>
+                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                </td>
+                            </tr>
+                        <%};%>
+                        </tbody>
+                    </table>
+                <% } else{ %>
+                    <h3 class="alert alert-danger">No hay carritos dados de alta</h1>
+                <% } %>
+            </div>
+            <br>
+            <button type="button" class="btn btn-dark">Nuevo Carrito</button>
+        </div>
+            
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

@@ -1,0 +1,17 @@
+paths:
+  /api/shoppingcartproducts:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Gets every shopping cart products of user logged
+      tags:
+        - Shopping Cart Products
+      responses:
+        "200":
+          description: Every shopping cart products of user logged.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ShoppingCart'

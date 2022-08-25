@@ -1,0 +1,44 @@
+# Shopping Cart
+components:
+  schemas:
+    ShoppingCart:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: The auto-generated id of the shopping cart by MongoAtlas
+        id:
+          type: string
+          description: The auto-generated id of the shopping cart by systems
+        estado:
+          type: string
+          description: The state of the shopping cart.
+        emailUsuario:
+          type: string
+          description: The email of the user logged.
+        productos:
+          type: array
+          description: The products of the shopping cart.
+        fechaUltModif:
+          type: string
+          description: The date of the last modification of the shopping cart.
+        direccionEntrega:
+          type: string
+          description: The shopping delivery address.
+      example:
+        _id: "62f086281215e75e05875a84"
+        id: "VZ02WR3OIPRCLF3J1BVK9S"
+        estado: "abierto"
+        emailUsuario: "admin@admin.com"
+        productos: [
+          {
+            "idProducto": "200RHTQ24MRA5XMU9MEH56",
+            "name": "test",
+            "description": "Producto test",
+            "image": "http://localhost:8080/images/IMG_20180917_104633.jpg",
+            "price": 130,
+            "cantidad": 1
+          }
+        ]
+        fechaUltModif: "08/08/2022 00:08:88"
+        direccionEntrega: ""

@@ -1,0 +1,35 @@
+# Product
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: The auto-generated id of the user by MongoAtlas
+        id:
+          type: string
+          description: The auto-generated id of the user by systems
+        email:
+          type: string
+          description: The email of the user.
+        password:
+          type: string
+          description: The password of the user.
+        name:
+          type: string
+          description: The name of the user.
+        lastname:
+          type: string
+          description: The lastname of the user.
+        phone:
+          type: string
+          description: The phone of the user.
+      example:
+        _id: "62ebd10887910a1fd98baaff"
+        id: "200RHTQ24MRA5XMU9MEH56"
+        email: "alyson.fritsch37@ethereal.email"
+        password: "1234"
+        name: "alyson"
+        lastname: "fritsch"
+        phone: "+541144441234"

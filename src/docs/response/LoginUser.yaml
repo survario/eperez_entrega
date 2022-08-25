@@ -1,0 +1,11 @@
+# NewProduct
+components:
+  responseBodies:
+    LoginUser:
+      type: object
+      properties:
+        msg:
+          type: string
+          description: The msg with of token.
+      example:
+        msg: "To be able to access the private api you must enter the token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyZjAzYTgzNzZlYWJhOGQ1NWQzMmI2YSIsImlkIjoiNkdUVFJRUzlVT05SREtJMkxITFJLSyIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkajhJTDZaVFRqTUNqeXhubkEyVk16LkVIQy5SbFJlRU56RUZCMmxEUG5ZZE16YnVDcEw5cWkiLCJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6bnVsbCwibmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJhZG1pbiIsImFkZHJlc3MiOm51bGwsImRhdGVCaXJ0aCI6bnVsbCwicGhvbmUiOiIrNTQxMTQ0NDQxMjM0IiwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjU5OTMwNjc3LCJleHAiOjE2NTk5MzQyNzd9.6CMeui4V5a8EbmRFh2xpKUp7jp5Rpcl9pHKwZE3hL_M"

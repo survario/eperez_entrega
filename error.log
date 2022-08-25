@@ -1,0 +1,10 @@
+[2022-08-24T19:56:54.647] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"fd\"}"}
+[2022-08-24T19:56:54.650] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"fd"}',
+    detalles: undefined
+  }
+}

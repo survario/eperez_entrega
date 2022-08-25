@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+        <!-- main -->
+        <div class="container text-center my-3">
+            <div class="jumbotron" style="background-color: rgb(239, 207, 207);color: white;">
+                <h1>
+                    <%= titulo %>
+                </h1>
+                <br>
+                <h2>
+                    <%= detalle %>
+                </h2>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+
+         <!-- scripts -->
+        <script type="text/javascript">
+            setTimeout("window.location='/web'", 3000);
+        </script>
+
+    </body>
+
+</html>

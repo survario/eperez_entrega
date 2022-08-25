@@ -1,0 +1,49 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 px-4">
+        <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="Logo"
+                 width="180px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto p-12">
+
+                <!--menus para clientes (cualquier visitante del sitio sin loguearse)-->
+                <li class="nav-item"><a class="nav-link" href="/web">Inicio</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/web/infoServer">Info-Servidor</a>
+                </li>
+
+                <!--menus para cualquier usuario, caso contrario aparece link login-->
+                <% if(rol!==undefined){ %>
+                    <li class="nav-item"><a class="nav-link" href="/web/chat">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/web/logout">Logout</a></li>
+                <% } else { %>
+                    <li class="nav-item"><a class="nav-link" href="/web/login">Login</a></li>
+                <% } %>               
+
+                <!--menus BACKEND solo para administradores-->
+                <% if(rol==="admin"){ %>
+                    &nbsp;&nbsp;
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        BACKEND
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">                    
+                            <a class="dropdown-item" href="/web/abmUsuarios">ABM Usuarios</a>
+                            <a class="dropdown-item" href="/web/abmProductos">ABM Productos</a>
+                            <a class="dropdown-item" href="/web/abmCarritos">ABM Carritos</a>
+                            <a class="dropdown-item" href="/web/abmPedidos">ABM Pedidos</a>
+                            <a class="dropdown-item" href="/web/abmMensajes">ABM Mensajes</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                <% } %>
+
+            </ul>
+        </div>
+        &nbsp;&nbsp;<span style="color:rgb(5, 5, 94); background-color: white;"><strong><%= nombre %></strong></span>
+    </nav>
+    <br><br>
+</header>

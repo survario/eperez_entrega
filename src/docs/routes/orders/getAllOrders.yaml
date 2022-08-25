@@ -1,0 +1,17 @@
+paths:
+  /api/orders:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Gets every orders of user logged
+      tags:
+        - Orders
+      responses:
+        "200":
+          description: Every orders of user logged.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'

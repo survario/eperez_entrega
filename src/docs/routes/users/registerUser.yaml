@@ -1,0 +1,19 @@
+paths:
+  /registro:
+    post:
+      summary: Register a new user
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/RegisterUser'
+      responses:
+        "201":
+          description: The registered user.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'

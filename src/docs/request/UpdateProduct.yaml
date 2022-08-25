@@ -1,0 +1,43 @@
+# UpdateProduct
+components:
+  requestBodies:
+    UpdateProduct:
+      type: object
+      required:
+        - name
+        - description
+        - category
+        - code
+        - image
+        - price
+        - stock
+      properties:
+        name:
+          type: string
+          description: The name of the product.
+        description:
+          type: string
+          description: The description of the product.
+        category:
+          type: string
+          description: The category of the product.
+        code:
+          type: number
+          description: The code of the product.
+        image:
+          type: string
+          description: The image of the product.
+        price:
+          type: number
+          description: The price of the product.
+        stock:
+          type: number
+          description: The stock of the product.
+      example:
+          name: "Reyes Magos"
+          description: "Los mejores Reyes Magos"
+          category: "Post Navidad"
+          code: 1234
+          image: "https://cdn1.iconfinder.com/data/icons/christmas-ultra-color/60/012_-_Tired_Santa-512.png"
+          price: 1000
+          stock: 3

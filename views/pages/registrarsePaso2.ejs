@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body class="fondo__degrade">
+  <!-- header -->
+  <%- include('../partials/header') %>
+
+  <div class="container my-5">
+    <div class=jumbotron>
+      <h2>Registrase</h2>
+      <br>
+
+      <form action="/web/registrarse" method="post">
+        <!-- email -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Email: </span>
+          </div>
+          <input type="email" id="email" name="email" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your email" required>
+        </div>
+        <!-- password -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">clave: </span>
+          </div>
+          <input type="password" id="password" name="password" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your password" required>
+        </div>
+        <!-- username -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">username: </span>
+          </div>
+          <input type="text" name="username" id="username" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your username" required>
+        </div>
+        <!-- Nombre -->        
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Name: </span>
+          </div>
+          <input type="text" name="name" id="name" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your name" required>
+        </div>
+        <!-- Apellido -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Lastname: </span>
+          </div>
+          <input type="text" id="lastname" name="lastname" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your lastname" required>
+        </div>
+        <!-- Direccion -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Address: </span>
+          </div>
+          <input type="text" id="address" name="address" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your address" required>
+        </div>     
+        <!-- Fecha de Nacimiento -->
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Date Birth: </span>
+            </div>
+            <input type="text" id="dateBirth" name="dateBirth" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Enter your date birth" required>
+        </div>     
+        <!-- Telefono -->
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Phone: </span>
+            </div>
+            <input type="text" id="phone" name="phone" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="enter your phone" required>
+        </div>      
+        <!-- Avatar -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Avatar: </span>
+          </div>
+         
+          <input type="text" id="avatar" name="avatar" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" value="<%=avatar%>" readonly>
+          </div>
+        <!-- boton enviar -->
+        <div class="form-group">
+          <input type="submit" value="Enviar" class="btn btn-primary">
+        </div>
+      </form>
+  </div>
+</div>
+
+  <!-- header -->
+  <%- include('../partials/footer') %>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+paths:
+  /login:
+    post:
+      summary: Login of user
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/LoginUser'
+      responses:
+        "200":
+          description: Login of user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responseBodies/LoginUser'

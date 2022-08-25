@@ -1,0 +1,40 @@
+# Order
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: The auto-generated id of the shopping cart by MongoAtlas
+        id:
+          type: string
+          description: The auto-generated id of the shopping cart by systems
+        emailUsuario:
+          type: string
+          description: The email of the user logged.
+        productos:
+          type: array
+          description: The products of the shopping cart.
+        estado:
+          type: string
+          description: The state of the shopping cart.
+        fechaPedida:
+          type: string
+          description: The date of the last modification of the shopping cart.
+      example:
+        _id: "62ed88539c17a52ce588fadc"
+        id: "8QWU5NBO4PQ89O7IVP75PW"
+        emailUsuario: "admin@admin.com"
+        productos: [
+          {
+            "idProducto": "200RHTQ24MRA5XMU9MEH56",
+            "name": "test",
+            "description": "Producto test",
+            "image": "http://localhost:8080/images/IMG_20180917_104633.jpg",
+            "price": 130,
+            "cantidad": 1
+          }
+        ]
+        estado: "generada"
+        fechaPedida: "08/08/2022 00:08:88"

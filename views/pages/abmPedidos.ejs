@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+        <div class="container mt-3">
+            <h1><strong>ABM de Pedidos</strong></h1>
+            <br>
+            <p>Listado de pedidos (carritos que se solicitó la compra) realizadas por los usuarios</p>
+            <% const hayProductos=pedidosList.length> 0; %>
+            <div class="table-responsive">
+                <% if(hayProductos){ %>                
+                    <table class="table table-bordered tablaABM">
+                        <thead>
+                            <tr>
+                                <th>Id Pedido</th>
+                                <th>email</th>
+                                <th>estado</th>
+                                <th>Fecha de compra</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for (const item of pedidosList) {%>
+                            <tr>
+                                <td><%= item.id %></td>
+                                <td><%= item.email %></td>
+                                <td><%= item.estado %></td>
+                                <td><%= item.fechaPedida %></td>
+                                <td>
+                                    <a href="#">modificar</a>
+                                    &nbsp;&nbsp;<a href="#">Ver Productos</a>
+                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                </td>
+                            </tr>
+                        <%};%>
+                        </tbody>
+                    </table>
+                <% } else{ %>
+                    <h3 class="alert alert-danger">No hay pedidos dados de alta</h1>
+                <% } %>
+            </div>
+            <br>
+            <button type="button" class="btn btn-dark">Nuevo Pedido</button>
+        </div>
+            
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+        
+    </body>
+
+</html>

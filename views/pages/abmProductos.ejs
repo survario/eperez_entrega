@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <%- include('../partials/head') %>
+    </head>
+
+    <body class="fondo__degrade">
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
+        <!--main -->
+        <div class="container mt-3">
+            <h1><strong>ABM de Productos</strong></h1>
+            <!-- Listado de productos -->
+            <p>Listado de Productos</p>
+            <br>
+            <% const hayProductos=productosList.length> 0; %>
+            <div class="table-responsive">
+                <% if(hayProductos){ %>                
+                    <table class="table table-bordered tablaABM">
+                        <thead>
+                            <tr>
+                                <th>Id Product</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for (const item of productosList) {%>
+                            <tr>
+                                <td id="idProducto"><%= item.id %></td>
+                                <td><%= item.name %></td>
+                                <td><%= item.description %></td>
+                                <td><%= item.price %></td>
+                                <td><%= item.stock %></td>
+                                <td><%= item.image %></td>
+                                <td>
+                                    <a href="#">modificar</a>
+                                    &nbsp;&nbsp;<a href='#'>borrar</a>
+                                </td>
+                            </tr>
+                        <%};%>
+                        </tbody>
+                    </table>
+                <% } else{ %>
+                    <h3 class="alert alert-danger">No hay productos dados de alta</h1>
+                <% } %>
+            </div>
+            <!-- boton para crear Nuevo Producto -->
+            <br>
+            <button type="button" class="btn btn-dark">Nuevo Producto</button>
+        </div>
+            
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+        
+    </body>
+
+
+
+</html>
