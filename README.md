@@ -17,18 +17,20 @@ Para probar las funcionalidades de admin, debe estar logueado con el email defin
 ### `npm start`
 
 Vistas Implementadas para todos los Usuarios
-    * /web
-    * /web/infoServer
-    * /web/login
-    * /web/chat
-    * /web/registrarsePaso1
+
+    - /web
+    - /web/infoServer
+    - /web/login
+    - /web/chat
+    - /web/registrarsePaso1
 
 Vistas Implementadas para el admin (debe estar logueado con el ADMIN_EMAIL definido en el archivo .env)
-    * /web/abmUsuarios (Ver Usuarios)
-    * /web/abmProductos (Ver Productos)
-    * /web/abmCarritos (Ver Carritos)
-    * /web/abmPedidos (Ver Pedidos)
-    * /web/abmPedidos (Ver Mensajes)
+
+    - /web/abmUsuarios (Ver Usuarios)
+    - /web/abmProductos (Ver Productos)
+    - /web/abmCarritos (Ver Carritos)
+    - /web/abmPedidos (Ver Pedidos)
+    - /web/abmPedidos (Ver Mensajes)
 
 
 El resto de las Rutas se encuentran Implementadas para Postman
